@@ -2,16 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My One-Page Website</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My One-Page Website</h1>
-    </header>
-    <main>
-        <p>This website is ready for content and style customizations.</p>
-    </main>
+
+    <!-- 5. Nav Tag (Navigation Bar) -->
+    <nav>
+        <a href="#about">About</a> | 
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- 6. Section Tag (About Section) -->
+    <section id="about">
+        <h2>About My Page</h2>
+        <p>Welcome to my one-page website project!</p>
+        
+        <!-- 1. Img Tag with Alt Attribute -->
+        <!-- Note: Replace the URL below with any image link you like -->
+        <img src="https://picsum.photos" alt="A beautiful placeholder landscape image">
+    </section>
+
+    <!-- 6. Section Tag (Media Section) -->
+    <section id="media">
+        <h2>Embedded Video</h2>
+        <!-- 3. Iframe Tag (Embeds a map or video) -->
+        <iframe src="https://youtube.com" width="400" height="250"></iframe>
+    </section>
+
+    <!-- 6. Section Tag (Contact Section) -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <!-- 2. Form Tag with Input Elements Inside -->
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- 4. Footer Tag -->
+    <footer>
+        <p>&copy; 2026 Jeffrey's Website. All rights reserved.</p>
+    </footer>
+
 </body>
-</html>s
+</html>
