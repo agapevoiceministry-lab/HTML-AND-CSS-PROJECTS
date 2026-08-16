@@ -1,5 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head><title>Pet Shop Website</title></head>
-<body><h1>The Pet Shop Website Project</h1></body>
-</html>
