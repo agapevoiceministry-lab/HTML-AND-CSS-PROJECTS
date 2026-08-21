@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Cinemas - Bootstrap Project</title>
+    <!-- Bootstrap CSS CDN link -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
+</head>
+<body>
+
+    <!-- 1. Bootstrap Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Academy Cinemas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#showtimes">Showtimes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Banner (Jumbotron Layout) -->
+    <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Academy Cinemas</h1>
+            <p class="lead">Sit back, relax, and enjoy the show with premium seating and sound.</p>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        <!-- 3. About Section -->
+        <section id="about" class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h3>About Our Theater</h3>
+                <p>Located in the heart of downtown, Academy Cinemas has been providing top-tier cinematic experiences for movie lovers since 1995. Featuring crystal-clear projection technology, immersive Dolby Atmos surround sound, and luxurious reclining seats, we make sure every viewing feels unforgettable.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://unsplash.com" class="img-fluid rounded shadow" alt="Movie Theater Seating">
+            </div>
+        </section>
+
+        <!-- 4. Showtimes Section (Bootstrap Responsive Cards) -->
+        <section id="showtimes" class="mb-5">
+            <h2 class="text-center mb-4">Now Showing</h2>
+            <div class="card-deck">
+                
+                <!-- Movie Card 1 -->
+                <div class="card shadow-sm">
+                    <img src="https://unsplash.com" class="card-img-top" alt="Sci-Fi Movie Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Interstellar Voyage</h5>
+                        <p class="card-text">A team of explorers travel beyond this galaxy to discover whether mankind has a future among the stars.</p>
+                        <span class="badge badge-pill badge-info">12:30 PM</span>
+                        <span class="badge badge-pill badge-info">3:45 PM</span>
+                        <span class="badge badge-pill badge-info">7:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Movie Card 2 -->
+                <div class="card shadow-sm">
+                    <img src="https://unsplash.com" class="card-img-top" alt="Action Movie Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Midnight Pursuit</h5>
+                        <p class="card-text">An adrenaline-fueled thriller tracing a race against time through the dark city streets to solve a conspiracy.</p>
+                        <span class="badge badge-pill badge-info">1:15 PM</span>
+                        <span class="badge badge-pill badge-info">4:30 PM</span>
+                        <span class="badge badge-pill badge-info">9:15 PM</span>
+                    </div>
+                </div>
+
+                <!-- Movie Card 3 -->
+                <div class="card shadow-sm">
+                    <img src="https://unsplash.com" class="card-img-top" alt="Comedy Movie Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">The Great Escape</h5>
+                        <p class="card-text">A hilarious family adventure following a group of eccentric zoo animals attempting to explore the outer wilderness.</p>
+                        <span class="badge badge-pill badge-info">11:00 AM</span>
+                        <span class="badge badge-pill badge-info">2:15 PM</span>
+                        <span class="badge badge-pill badge-info">5:30 PM</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Deals Form Section -->
+        <section id="deals" class="bg-light p-4 rounded text-center shadow-sm">
+            <h3>Movie Rewards Club</h3>
+            <p class="text-muted">Sign up to receive exclusive discounts, weekly coupons, and free concessions points!</p>
+            <form class="form-inline justify-content-center">
+                <input type="email" class="form-control mb-2 mr-sm-2" id="userEmail" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 6. Required Assignment Feature: Bootstrap Footer Element -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Academy Cinemas. All Rights Reserved.</p>
+            <small class="text-muted">Designed using standard Bootstrap layout structures.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS Scripts CDN (Required for responsive navbar toggles) -->
+    <script src="https://jquery.com"></script>
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>
