@@ -5,6 +5,44 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* JavaScript Dark Mode Classes */
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+body.dark-mode .project-card {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-top: 4px solid #f39c12;
+    box-shadow: 0 4px 6px rgba(255,255,255,0.05);
+}
+
+body.dark-mode h2 {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+
+/* Button Styling */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.toggle-btn:hover {
+    background-color: #465c71;
 }
 
 header {
@@ -12,6 +50,7 @@ header {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    position: relative;
 }
 
 .container {
@@ -39,6 +78,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-top: 4px solid #3498db;
+    transition: background-color 0.3s ease;
 }
 
 .project-card h3 {
