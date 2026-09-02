@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Page Gallery Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Interactive Photo Gallery</h1>
+        <p>Click on any photo below to see the functional JavaScript Lightbox modal animation in action.</p>
+    </header>
+
+    <main class="container">
+        <section class="gallery-section">
+            <h2>Photo Collection</h2>
+            
+            <!-- Gallery Grid Layout -->
+            <div class="gallery-grid">
+                <!-- Image Item 1 -->
+                <div class="gallery-item">
+                    <img src="https://picsum.photos" alt="Majestic Mountains" onclick="openLightbox(this.src, this.alt)">
+                </div>
+                <!-- Image Item 2 -->
+                <div class="gallery-item">
+                    <img src="https://picsum.photos" alt="Lush Forest Trail" onclick="openLightbox(this.src, this.alt)">
+                </div>
+                <!-- Image Item 3 -->
+                <div class="gallery-item">
+                    <img src="https://picsum.photos" alt="Beautiful Ocean Waves" onclick="openLightbox(this.src, this.alt)">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- THE LIGHTBOX MODAL CONTAINER (Hidden by default) -->
+    <div id="lightboxModal" class="modal">
+        <!-- Close Button (X icon) -->
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        
+        <!-- Large Modal Image Display -->
+        <img class="modal-content" id="modalImg" alt="Popup Display">
+        
+        <!-- Image Caption Element -->
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 One-Page Lightbox Project. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Core Functional Lightbox Actions Script -->
+    <script>
+        function openLightbox(imageSrc, imageAlt) {
+            document.getElementById("lightboxModal").style.display = "block";
+            document.getElementById("modalImg").src = imageSrc;
+            document.getElementById("caption").innerHTML = imageAlt;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightboxModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
