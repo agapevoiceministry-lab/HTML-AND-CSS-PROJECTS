@@ -27,12 +27,6 @@
             background-color: #000;
         }
 
-        video {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
         /* Part 1c: JavaScript Animation Styling */
         #animatedBox {
             width: 100px;
@@ -66,11 +60,14 @@
     <p>Enjoy the music video below, customized with CSS and animated with JavaScript!</p>
 
     <div class="video-container">
-        <!-- Direct HTML5 video stream to bypass third-party domain blocks -->
-        <video controls autoplay muted loop>
-            <source src="https://mixkit.co" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <!-- Part 1a: Corrected YouTube Embed Framework -->
+        <iframe width="560" height="315" 
+                src="https://youtube.com" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+        </iframe>
     </div>
 
     <!-- Part 1c: JavaScript Animation Elements -->
