@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Music Video</title>
+    <style>
+        /* Part 1b: CSS Customization */
+        body {
+            background-color: #121212; /* Dark theme background */
+            color: #ffffff;            /* White text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #1db954; /* Music-themed green heading */
+        }
+
+        .video-container {
+            margin: 30px auto;
+            max-width: 560px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Part 1c: JavaScript Animation Styling */
+        #animatedBox {
+            width: 100px;
+            height: 100px;
+            background-color: #1db954;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative; /* Required for moving left/right */
+        }
+
+        button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #1aa34a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Part 1a: Basic HTML & Embedded Music Video -->
+    <h1>Welcome to My Favorite Music Track</h1>
+    <p>Enjoy the music video below, customized with CSS and animated with JavaScript!</p>
+
+    <div class="video-container">
+        <!-- Direct HTML5 video stream to bypass third-party domain blocks -->
+        <video controls autoplay muted loop>
+            <source src="https://mixkit.co" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Part 1c: JavaScript Animation Elements -->
+    <h2>Interactive Animation</h2>
+    <button onclick="startAnimation()">Click to Animate</button>
+    <div id="animatedBox"></div>
+
+    <script>
+        // JavaScript Animation Function
+        function startAnimation() {
+            let box = document.getElementById("animatedBox");
+            let position = 0;
+            let direction = 1;
+            
+            // Clear any existing intervals to prevent acceleration bugs
+            clearInterval(window.animInterval);
+
+            window.animInterval = setInterval(frame, 5);
+
+            function frame() {
+                if (position >= 150) {
+                    direction = -1; // Move backward
+                } else if (position <= -150) {
+                    direction = 1;  // Move forward
+                }
+                position += direction * 2;
+                box.style.left = position + 'px';
+            }
+        }
+    </script>
+
+</body>
+</html>
